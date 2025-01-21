@@ -1,0 +1,10 @@
+[package]
+name = "my_rust_project"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rpassword = "7.0"          # For secure password input
+ring = "0.16.20"           # For cryptographic operations
+serde = { version = "1.0", features = ["derive"] } # For serialization and deserialization
+serde_json = "1.0"         # For JSON handling
