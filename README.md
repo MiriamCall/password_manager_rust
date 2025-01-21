@@ -20,7 +20,6 @@ Websites helpful for this project:
 - Rust Wikipedia https://en.wikipedia.org/wiki/Rust_(programming_language)
 - Rust Tutorial https://www.tutorialspoint.com/rust/index.htm
 - Building a Secure Password Manager in Rust https://rabmcmenemy.medium.com/building-a-secure-password-manager-in-rust-d0ec0ff9f911
-- ChatGPT https://chatgpt.com/share/678fe73b-78ac-8006-bc3e-1c83fd32b1dc
 
 # Future Work
 
