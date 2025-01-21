@@ -89,7 +89,7 @@ impl PasswordManager {
     /// Loads the manager from a file
     fn load_from_file(filename: &str, master_password: &str) -> Self {
         let data = fs::read_to_string(filename).unwrap();
-        let mut manager: PasswordManager = serde_json::from_str(&data).unwrap();
+        let manager: PasswordManager = serde_json::from_str(&data).unwrap();
 
         let mut master_key = [0u8; KEY_LEN];
         pbkdf2::derive(
