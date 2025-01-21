@@ -1,17 +1,17 @@
-use rpassword::prompt_password;
-use ring::{aead, pbkdf2, rand::{SecureRandom, SystemRandom}};
-use serde::{Deserialize, Serialize};
-use std::{collections::HashMap, fs, num::NonZeroU32};
+use rpassword::prompt_password; //prompts for password without putting it in the terminal
+use ring::{aead, pbkdf2, rand::{SecureRandom, SystemRandom}}; //ring is a cryptography library
+use serde::{Deserialize, Serialize}; //serde is a serialization/deserialization library
+use std::{collections::HashMap, fs, num::NonZeroU32}; //fs is a file system library
 
-const PBKDF2_ITERATIONS: NonZeroU32 = NonZeroU32::new(100_000).unwrap();
-const KEY_LEN: usize = 32;
-const NONCE_LEN: usize = 12;
+const PBKDF2_ITERATIONS: NonZeroU32 = NonZeroU32::new(100_000).unwrap(); //number of iterations for PBKDF2
+const KEY_LEN: usize = 32; //length of the key
+const NONCE_LEN: usize = 12; //length of the nonce
 
 #[derive(Serialize, Deserialize)]
 struct PasswordManager {
-    master_key: [u8; KEY_LEN],
-    passwords: HashMap<String, Vec<u8>>,
-    nonces: HashMap<String, [u8; NONCE_LEN]>,
+    master_key: [u8; KEY_LEN], //master key
+    passwords: HashMap<String, Vec<u8>>, //hashmap to store passwords
+    nonces: HashMap<String, [u8; NONCE_LEN]>, //hashmap to store nonces
 }
 
 impl PasswordManager {

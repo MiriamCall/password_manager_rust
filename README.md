@@ -4,7 +4,7 @@ This Password Manager program was created so I could learn more about Rust. I am
 
 This program in Rust helps protect and store passwords. It is a password manager. You have one master password for this program to access all your other passwords. In this program you can add new passwords and retrieve your old passwords.
 
-[Software Demo Video](http://youtube.link.goes.here)
+Software Demo Video https://youtu.be/_kpxVLMV62M
 
 # Development Environment
 
